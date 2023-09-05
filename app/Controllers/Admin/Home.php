@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
+
+use App\Controllers\BaseController;
 
 class Home extends BaseController
 {
@@ -10,6 +12,6 @@ class Home extends BaseController
             'menu' => 'dashboard',
             'submenu' => ''
         ];
-        return view('viewhome.php', $data);
+        return view('admin/viewhome.php', $data);
     }
 }

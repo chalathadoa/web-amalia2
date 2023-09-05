@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
@@ -12,6 +12,6 @@ class Jamaah extends BaseController
             'menu' => 'jamaah',
             'submenu' => ''
         ];
-        return view('jamaah/viewjamaah.php', $data);
+        return view('admin/viewjamaah.php', $data);
     }
 }

@@ -19,14 +19,14 @@
     <!-- Start GA -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-94034622-3');
+        gtag('config', 'UA-94034622-3');
     </script>
     <!-- /END GA -->
 </head>
@@ -38,15 +38,12 @@
             <nav class="navbar navbar-expand-lg main-navbar">
                 <form class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
-                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i
-                                    class="fas fa-bars"></i></a></li>
-                        <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
-                                    class="fas fa-search"></i></a></li>
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                        <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
                     </ul>
                     <!-- SEARCH START -->
                     <div class="search-element">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"
-                            data-width="250">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
                         <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                         <div class="search-backdrop"></div>
                         <div class="search-result">
@@ -70,22 +67,19 @@
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-3-50.png"
-                                        alt="product">
+                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-3-50.png" alt="product">
                                     oPhone S9 Limited Edition
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-2-50.png"
-                                        alt="product">
+                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-2-50.png" alt="product">
                                     Drone X2 New Gen-7
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-1-50.png"
-                                        alt="product">
+                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-1-50.png" alt="product">
                                     Headphone Blitz
                                 </a>
                             </div>
@@ -114,8 +108,7 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <!-- MESSAGES START -->
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                            class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
                         <div class="dropdown-menu dropdown-list dropdown-menu-right">
                             <div class="dropdown-header">Messages
                                 <div class="float-right">
@@ -184,8 +177,7 @@
                     <!-- MESSAGES END -->
 
                     <!-- NOTIF START -->
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                            class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
                         <div class="dropdown-menu dropdown-list dropdown-menu-right">
                             <div class="dropdown-header">Notifications
                                 <div class="float-right">
@@ -247,8 +239,7 @@
                     <!-- NOTIF END -->
 
                     <!-- USER START -->
-                    <li class="dropdown"><a href="#" data-toggle="dropdown"
-                            class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, Amalia</div>
                         </a>
@@ -279,45 +270,36 @@
                             <img src="/assets/img/logo/logo.png" style="width: 40px; height: 40px;">
                         </div>
                         <div class="col" style="line-height: 20px;">
-                            <a href="<?=site_url()?>" class="col" style="color: #ff3d87;">A M A L I A</a><br>
-                            <a href="<?=site_url()?>" class="col">House of Muslimah</a>
+                            <a href="<?= site_url() ?>" class="col" style="color: #ff3d87;">A M A L I A</a><br>
+                            <a href="<?= site_url() ?>" class="col">House of Muslimah</a>
                         </div>
                     </div>
                     <!-- ??-->
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="<?=site_url()?>">St</a>
+                        <a href="<?= site_url() ?>">St</a>
                     </div>
                     <!-- ?? -->
                     <ul class="sidebar-menu">
-                        <li class="<?= $menu == 'dashboard' ? 'active' : ''?>"><a class="nav-link"
-                                href="<?=site_url()?>"><i class="fas fa-fire"></i>
+                        <li class="<?= $menu == 'dashboard' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url() ?>"><i class="fas fa-fire"></i>
                                 <span>Dashboard</span></a></li>
-                        <li class="dropdown <?= $menu == 'manage' ? 'active' : ''?>">
-                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
-                                    class="fa fa-clipboard-list"></i> <span>Manage</span></a>
+                        <li class="dropdown <?= $menu == 'manage' ? 'active' : '' ?>">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-clipboard-list"></i> <span>Manage</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link <?= $submenu == 'manageusers' ? 'active' : ''?>"
-                                        href="<?=site_url('manage_users')?>">Manage Users</a></li>
-                                <li><a class="nav-link <?= $submenu == 'manageevents' ? 'active' : ''?>"
-                                        href="<?=site_url('manage_events')?>">Manage Events</a></li>
-                                <li><a class="nav-link <?= $submenu == 'managesantriwati' ? 'active' : ''?>"
-                                        href="<?=site_url('manage_santriwati')?>">Manage Santriwati</a>
+                                <li><a class="nav-link <?= $submenu == 'manageusers' ? 'active' : '' ?>" href="<?= site_url('manage_users') ?>">Manage Users</a></li>
+                                <li><a class="nav-link <?= $submenu == 'manageevents' ? 'active' : '' ?>" href="<?= site_url('manage_events') ?>">Manage Events</a></li>
+                                <li><a class="nav-link <?= $submenu == 'managesantriwati' ? 'active' : '' ?>" href="<?= site_url('manage_santriwati') ?>">Manage Santriwati</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="<?= $menu == 'jamaah' ? 'active' : ''?>"><a class="nav-link"
-                                href="<?=site_url('jamaah')?>"><i class="fa fa-mosque"></i>
+                        <li class="<?= $menu == 'jamaah' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url('jamaah') ?>"><i class="fa fa-mosque"></i>
                                 <span>Jama'ah</span></a></li>
-                        <li class="dropdown <?= $menu == 'laporansantriwati' ? 'active' : ''?>">
+                        <li class="dropdown <?= $menu == 'laporansantriwati' ? 'active' : '' ?>">
                             <a href="#" class="nav-link has-dropdown"><i class="fa fa-book"></i>
                                 <span>Laporan Santriwati</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link <?= $submenu == 'pelanggaran' ? 'active' : ''?>"
-                                        href="<?=site_url('pelanggaran')?>">Pelanggaran</a></li>
-                                <li><a class="nav-link <?= $submenu == 'prestasi' ? 'active' : ''?>"
-                                        href="<?=site_url('prestasi')?>">Prestasi</a></li>
-                                <li><a class="nav-link <?= $submenu == 'raportpenilaian' ? 'active' : ''?>"
-                                        href="<?=site_url('raport_penilaian')?>">Raport Penilaian</a>
+                                <li><a class="nav-link <?= $submenu == 'pelanggaran' ? 'active' : '' ?>" href="<?= site_url('pelanggaran') ?>">Pelanggaran</a></li>
+                                <li><a class="nav-link <?= $submenu == 'prestasi' ? 'active' : '' ?>" href="<?= site_url('prestasi') ?>">Prestasi</a></li>
+                                <li><a class="nav-link <?= $submenu == 'raportpenilaian' ? 'active' : '' ?>" href="<?= site_url('raport_penilaian') ?>">Raport Penilaian</a>
                                 </li>
                             </ul>
                         </li>
@@ -334,13 +316,16 @@
             </div>
 
             <!-- Main Content -->
+            <?
+            /**
+             * @var CodeIgniter\View\View $this
+             */ ?>
             <div class="main-content">
                 <?= $this->renderSection('content') ?>
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2023 <div class="bullet"></div> Design By <a
-                        href="https://chalathadoa.github.io/">Udkhul Rogodan</a>
+                    Copyright &copy; 2023 <div class="bullet"></div> Design By <a href="https://chalathadoa.github.io/">Udkhul Rogodan</a>
                 </div>
                 <div class="footer-right">
                     v1.0

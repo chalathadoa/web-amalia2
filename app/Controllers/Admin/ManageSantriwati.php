@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
@@ -12,6 +12,6 @@ class ManageSantriwati extends BaseController
             'menu' => 'manage',
             'submenu' => 'managesantriwati'
         ];
-        return view('manage/viewmanagesantriwati.php', $data);
+        return view('admin/manage/viewmanagesantriwati.php', $data);
     }
 }

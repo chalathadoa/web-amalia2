@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
@@ -12,6 +12,6 @@ class Pelanggaran extends BaseController
             'menu' => 'laporansantriwati',
             'submenu' => 'pelanggaran'
         ];
-        return view('laporan_santriwati/viewpelanggaran.php', $data);
+        return view('admin/laporan_santriwati/viewpelanggaran.php', $data);
     }
 }

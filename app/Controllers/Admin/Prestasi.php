@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
@@ -12,6 +12,6 @@ class Prestasi extends BaseController
             'menu' => 'laporansantriwati',
             'submenu' => 'prestasi'
         ];
-        return view('laporan_santriwati/viewprestasi.php', $data);
+        return view('admin/laporan_santriwati/viewprestasi.php', $data);
     }
 }

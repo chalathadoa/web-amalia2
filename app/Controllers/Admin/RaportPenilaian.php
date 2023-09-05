@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
@@ -12,6 +12,6 @@ class RaportPenilaian extends BaseController
             'menu' => 'laporansantriwati',
             'submenu' => 'raportpenilaian'
         ];
-        return view('laporan_santriwati/viewraportpenilaian.php', $data);
+        return view('admin/laporan_santriwati/viewraportpenilaian.php', $data);
     }
 }

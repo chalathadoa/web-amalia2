@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Admin\Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -26,18 +26,19 @@ $routes->set404Override();
  * Route Definitions
  * --------------------------------------------------------------------
  */
-
+// C:\xampp\htdocs\web-amalia2\app\Controllers\admin\Home.php
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-// $routes->addRedirect('/', 'home');
-$routes->get('/manage_users', 'ManageUsers::index');
-$routes->get('/manage_events', 'ManageEvents::index');
-$routes->get('/manage_santriwati', 'ManageSantriwati::index');
-$routes->get('/jamaah', 'Jamaah::index');
-$routes->get('/pelanggaran', 'Pelanggaran::index');
-$routes->get('/prestasi', 'Prestasi::index');
-$routes->get('/raport_penilaian', 'RaportPenilaian::index');
+
+$routes->get('/', 'Admin\Home::index');
+$routes->get('/manage_users', 'Admin\ManageUsers::index');
+$routes->get('/manage_events', 'Admin\ManageEvents::index');
+$routes->get('/manage_santriwati', 'Admin\ManageSantriwati::index');
+$routes->get('/jamaah', 'Admin\Jamaah::index');
+$routes->get('/pelanggaran', 'Admin\Pelanggaran::index');
+$routes->get('/prestasi', 'Admin\Prestasi::index');
+$routes->get('/raport_penilaian', 'Admin\RaportPenilaian::index');
+// $routes->addRedirect('/', 'admin/viewhome');
 
 /*
  * --------------------------------------------------------------------
