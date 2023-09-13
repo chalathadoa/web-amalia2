@@ -12,6 +12,6 @@ class ManageSantriwati extends BaseController
             'menu' => 'manage',
             'submenu' => 'managesantriwati'
         ];
-        return view('admin/manage/viewmanagesantriwati.php', $data);
+        return view('admin/managesantriwati/viewmanagesantriwati.php', $data);
     }
 }

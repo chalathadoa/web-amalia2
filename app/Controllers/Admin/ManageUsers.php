@@ -17,6 +17,6 @@ class ManageUsers extends BaseController
             'query' => $query,
         ];
         // $data2['datauser'] = $query;
-        return view('admin/manage/viewmanageusers', $data);
+        return view('admin/manageusers/viewmanageusers', $data);
     }
 }
