@@ -29,6 +29,10 @@ class ManageEvents extends BaseController
         ];
         return view('admin/manageevents/viewdetail.php', $data);
     }
+    public function tambah()
+    {
+        return view('admin/manageevents/viewaddevent.php');
+    }
     public function store()
     {
         if (!$this->validate([
