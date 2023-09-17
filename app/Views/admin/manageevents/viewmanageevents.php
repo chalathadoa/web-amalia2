@@ -62,36 +62,38 @@
                                         <th>Lokasi</th>
                                         <th>Status</th>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="custom-checkbox custom-control">
-                                                <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-                                                <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                                            </div>
-                                        </td>
-                                        <td>0001</td>
-                                        <td>Amalia Berbagi
-                                            <div class="table-links">
-                                                <a href="#">View</a>
-                                                <div class="bullet"></div>
-                                                <a href="#">Edit</a>
-                                                <div class="bullet"></div>
-                                                <a href="#" class="text-danger">Trash</a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <a href="#">
-                                                <img alt="image" src="assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="title" title="">
-                                                <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                            </a>
-                                        </td>
-                                        <td>20-09-2023</td>
-                                        <td>28-09-2023</td>
-                                        <td>asrama</td>
-                                        <td>
-                                            <div class="badge badge-primary">Done</div>
-                                        </td>
-                                    </tr>
+                                    <?php foreach ($events as $event) : ?>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
+                                                    <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
+                                                </div>
+                                            </td>
+                                            <td><?= $event['id_event']; ?></td>
+                                            <td><?= $event['nama_event']; ?>
+                                                <div class="table-links">
+                                                    <a href="/event/<?= $event['slug']; ?>">View</a>
+                                                    <div class="bullet"></div>
+                                                    <a href="#">Edit</a>
+                                                    <div class="bullet"></div>
+                                                    <a href="#" class="text-danger">Trash</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <img alt="image" src="assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="title" title="">
+                                                    <div class="d-inline-block ml-1">Rizal Fakhri</div>
+                                                </a>
+                                            </td>
+                                            <td>20-09-2023</td>
+                                            <td><?= $event['tanggal_event']; ?></td>
+                                            <td><?= $event['lokasi_event']; ?></td>
+                                            <td>
+                                                <div class="badge badge-primary">Done</div>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                     <tr>
                                         <td>
                                             <div class="custom-checkbox custom-control">

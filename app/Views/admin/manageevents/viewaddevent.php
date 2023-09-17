@@ -28,22 +28,30 @@
                         <?= csrf_field(); ?>
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Name</label>
+                                <label>Nama Kegiatan</label>
                                 <input type="text" name="nama_event" class="form-control" required autofocus>
                             </div>
                             <div class="form-group">
-                                <label>Date</label>
+                                <label>Tanggal</label>
                                 <input type="date" name="tanggal_event" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Banner Kegiatan</label>
-                                <div id="image-preview" class="dropify" data-show-loader="true" style="background-image: none; background-size: cover; background-position: center center;">
-                                    <label for="banner_event" id="image-label">Choose File</label>
-                                    <input type="file" name="banner_event" id="banner_event">
+                                <p style="line-height:5px; font-size:small;">*silakan pakai format .jpg/.jpeg/.png</p>
+                                <p style="line-height:3px; font-size:small;">*ukuran maksimum 1 MB</p>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label for="banner_event" id="image-label">Choose File</label>
+                                        <input type="file" name="banner_event" id="banner_event" onchange="getImagePreview(event)" required>
+                                    </div>
+                                    <div class="card col-3 m-sm-1" style="width:fit-content;; outline: 1.5px solid #9a8c98;">
+                                        <div class="card m-1" id="preview" name="preview" style="background-image:none;  background-size: cover; background-repeat: no-repeat; background-position: center center; height:230px;">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Description</label>
+                                <label>Deskripsi</label>
                                 <form>
                                     <div class="form-group">
                                         <textarea class="summernote form-control" name="deskripsi_event" style="display: none;" required></textarea>
@@ -64,5 +72,15 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function getImagePreview(event) {
+            var image = URL.createObjectURL(event.target.files[0]);
+            var imagediv = document.getElementById('preview');
+            var newimg = document.createElement('img');
+            imagediv.innerHTML = '';
+            newimg.src = image;
+            imagediv.appendChild(newimg);
+        }
+    </script>
 </section>
 <?= $this->endSection() ?>

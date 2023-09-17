@@ -6,17 +6,28 @@ use App\Controllers\BaseController;
 
 class ManageEvents extends BaseController
 {
+    protected $eventsModel;
+    public function __construct()
+    {
+        $this->eventsModel = new \App\Models\EventsModel();
+    }
     public function index()
     {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('events');
-        $query   = $builder->get()->getResult();
+        $eventsdb = $this->eventsModel->getEvent();
         $data = [
             'menu' => 'manage',
             'submenu' => 'manageevents',
-            'query' => $query,
+            'events' => $eventsdb,
         ];
         return view('admin/manageevents/viewmanageevents.php', $data);
+    }
+    public function detail($slug)
+    {
+        $data = [
+            'title' => 'Detail Event',
+            'event' => $this->eventsModel->getEvent($slug)
+        ];
+        return view('admin/manageevents/viewdetail.php', $data);
     }
     public function store()
     {
@@ -31,7 +42,9 @@ class ManageEvents extends BaseController
                 ]
             ],
         ])) {
-            dd('berhasil');
+            // mengambil file gambar
+            $fileBanner = $this->request->getFile('preview');
+            dd($fileBanner);
             $slug = url_title($this->request->getVar('nama_event'), '-', true);
             // nama sama
             $data = [
