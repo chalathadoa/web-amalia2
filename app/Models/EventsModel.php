@@ -14,12 +14,17 @@ class EventsModel extends Model
     protected $allowedFields    = ['nama_event', 'tanggal_event', 'lokasi_event', 'banner_event', 'deskripsi_event', 'status_event'];
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    // protected $updatedField  = 'updated_at';
+    // protected $deletedField  = 'deleted_at';
 
+    /**
+     * Summary of getEvent
+     * @param mixed $slug
+     * @return array|object|null
+     */
     public function getEvent($slug = false)
     {
         if ($slug == false) {

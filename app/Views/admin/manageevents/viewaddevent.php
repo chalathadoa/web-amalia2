@@ -29,11 +29,17 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Kegiatan</label>
-                                <input type="text" name="nama_event" class="form-control" required autofocus>
+                                <input type="text" name="nama_event" class="form-control <?= ($validation->hasError('nama_event')) ? 'is_invalid' : ''; ?>" value="<?= old('nama_event'); ?>" required autofocus>
+                                <div class="invalid-feedback">
+                                    <?= $validation->getError('nama_event'); ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Tanggal</label>
-                                <input type="date" name="tanggal_event" class="form-control" required>
+                                <input type="date" name="tanggal_event" class="form-control <?= ($validation->hasError('tanggal_event')) ? 'is_invalid' : ''; ?>" value="<?= old('tanggal_event'); ?>" required>
+                                <div class="invalid-feedback">
+                                    <?= $validation->getError('tanggal_event'); ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Banner Kegiatan</label>
@@ -42,7 +48,10 @@
                                 <div class="row">
                                     <div class="col-4">
                                         <label for="banner_event" id="image-label">Choose File</label>
-                                        <input type="file" name="banner_event" id="banner_event" onchange="getImagePreview(event)" required>
+                                        <input type="file" class="form-file-input <?= ($validation->hasError('banner_event')) ? 'is_invalid' : ''; ?>" name="banner_event" id="banner_event" onchange="getImagePreview(event)" required>
+                                        <div class="invalid-feedback">
+                                            <?= $validation->getError('banner_event'); ?>
+                                        </div>
                                     </div>
                                     <div class="card col-3 m-sm-1" style="width:fit-content;; outline: 1.5px solid #9a8c98;">
                                         <div class="card m-1" id="preview" name="preview" style="background-image:none;  background-size: cover; background-repeat: no-repeat; background-position: center center; height:230px;">
@@ -54,13 +63,19 @@
                                 <label>Deskripsi</label>
                                 <form>
                                     <div class="form-group">
-                                        <textarea class="summernote form-control" name="deskripsi_event" style="display: none;" required></textarea>
+                                        <textarea class="summernote form-control <?= ($validation->hasError('deskripsi_event')) ? 'is_invalid' : ''; ?>" name="deskripsi_event" value="<?= old('deskripsi_event'); ?>" style="display: none;" required></textarea>
+                                        <div class="invalid-feedback">
+                                            <?= $validation->getError('deskripsi_event'); ?>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
                             <div class="form-group">
                                 <label>Lokasi</label>
-                                <textarea class="form-control" name="lokasi_event" required></textarea>
+                                <textarea class="form-control <?= ($validation->hasError('lokasi_event')) ? 'is_invalid' : ''; ?>" name="lokasi_event" value="<?= old('lokasi_event'); ?>" required></textarea>
+                                <div class="invalid-feedback">
+                                    <?= $validation->getError('lokasi_event'); ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Create Event</button>

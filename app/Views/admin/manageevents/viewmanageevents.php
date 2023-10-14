@@ -18,6 +18,25 @@
         </div>
     </div>
 
+    <?php if (session()->getFlashdata('success')) : ?>
+        <div class="alert alert-primary" role="alert">
+            <div class="alert-body">
+                <button class="close" data-dismiss="alert">x</button>
+                <b>Success! </b>
+                <?= session()->getFlashdata('success'); ?>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if (session()->getFlashdata('error')) : ?>
+        <div class="alert alert-danger" role="alert">
+            <div class="alert-body">
+                <button class="close" data-dismiss="alert">x</button>
+                <b>Error! </b>
+                <?= session()->getFlashdata('error'); ?>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <div class="section-body">
         <h2 class="section-title">Manage Your Events</h2>
         <p class="section-lead">
@@ -73,11 +92,15 @@
                                             <td><?= $event['id_event']; ?></td>
                                             <td><?= $event['nama_event']; ?>
                                                 <div class="table-links">
-                                                    <a href="/event/<?= $event['slug']; ?>">View</a>
+                                                    <a href="/manage_events/<?= $event['id_event']; ?>">View</a>
                                                     <div class="bullet"></div>
-                                                    <a href="#">Edit</a>
-                                                    <div class="bullet"></div>
-                                                    <a href="#" class="text-danger">Trash</a>
+                                                    <a href="/manage_events/edit/<?= $event['id_event']; ?>">Edit</a>
+                                                    <form action="/manage_events/<?= $event['id_event']; ?>" method="post" class="d-inline">
+                                                        <?= csrf_field(); ?>
+                                                        <input type="hidden" name="_method" value="DELETE">
+                                                        <div class="bullet"></div>
+                                                        <a href="/manage_events/delete/<?= $event['id_event']; ?>" class="text-danger">Trash</a>
+                                                    </form>
                                                 </div>
                                             </td>
                                             <td>

@@ -8,11 +8,11 @@
 "use strict";
 
 // membuat dinamis clickable
-var path = location.pathname.split('/')
-var url = location.origin + '/' + path[1]
+// var path = location.pathname.split('/')
+// var url = location.origin + '/' + path[1]
 
-$('ul.sidebar-menu li a').each(function(){
-    if($(this).attr('href').indexOf(url) !== -1){
-        $(this).parent().addClass('active').parent().parent('li').addClass('active')
-    }
-})
+// $('ul.sidebar-menu li a').each(function(){
+//     if($(this).attr('href').indexOf(url) !== -1){
+//         $(this).parent().addClass('active').parent().parent('li').addClass('active')
+//     }
+// })

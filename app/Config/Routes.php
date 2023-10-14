@@ -32,16 +32,20 @@ $routes->set404Override();
 
 $routes->get('/', 'Admin\Home::index');
 $routes->get('/manage_users', 'Admin\ManageUsers::index');
+
+// manage events
 $routes->get('/manage_events', 'Admin\ManageEvents::index');
+$routes->get('/add_event', 'Admin\ManageEvents::tryadd');
 $routes->post('/manage_events', 'Admin\ManageEvents::store');
-$routes->get('/event/(:segment)', 'Admin\ManageEvents::detail/$1');
-$routes->get('/detail_event', 'Admin\DetailEvent::detail');
+// $routes->get('/manage_events/(:any)', 'Admin\ManageEvents::detail/$1');
+$routes->get('/manage_events/edit/(:any)', 'Admin\ManageEvents::edit/$1');
+$routes->delete('/manage_events/(:num)', 'Admin\ManageEvents::delete/$1');
+$routes->get('/manage_events/delete/(:any)', 'Admin\ManageEvents::delete/$1');
 
-// pemanggilan multiview
-$routes->get('/add_event', 'Admin\ManageEvents::tambah');
+$routes->get('/upload', 'Admin\TryInsert::index');
+$routes->post('/upload/upload', 'Admin\TryInsert::upload');
 
 
-$routes->post('/add_event', 'Admin\AddEvent::store');
 $routes->get('/manage_santriwati', 'Admin\ManageSantriwati::index');
 $routes->get('/jamaah', 'Admin\Jamaah::index');
 $routes->get('/pelanggaran', 'Admin\Pelanggaran::index');

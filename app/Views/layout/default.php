@@ -13,15 +13,15 @@
     <?= $this->renderSection('title') ?>
 
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="/assets/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="/assets/modules/summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="/assets/modules/chocolat/dist/css/chocolat.css">
+    <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="assets/modules/chocolat/dist/css/chocolat.css">
     <!-- Template CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <!-- dropify -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css" integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -76,19 +76,19 @@
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="/assets/img/products/product-3-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-3-50.png" alt="product">
                                     oPhone S9 Limited Edition
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="/assets/img/products/product-2-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-2-50.png" alt="product">
                                     Drone X2 New Gen-7
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="/assets/img/products/product-1-50.png" alt="product">
+                                    <img class="mr-3 rounded" width="30" src="assets/img/products/product-1-50.png" alt="product">
                                     Headphone Blitz
                                 </a>
                             </div>
@@ -127,7 +127,7 @@
                             <div class="dropdown-list-content dropdown-list-message">
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="/assets/img/avatar/avatar-1.png" class="rounded-circle">
+                                        <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle">
                                         <div class="is-online"></div>
                                     </div>
                                     <div class="dropdown-item-desc">
@@ -138,7 +138,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="/assets/img/avatar/avatar-2.png" class="rounded-circle">
+                                        <img alt="image" src="assets/img/avatar/avatar-2.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Dedik Sugiharto</b>
@@ -148,7 +148,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="/assets/img/avatar/avatar-3.png" class="rounded-circle">
+                                        <img alt="image" src="assets/img/avatar/avatar-3.png" class="rounded-circle">
                                         <div class="is-online"></div>
                                     </div>
                                     <div class="dropdown-item-desc">
@@ -159,7 +159,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="/assets/img/avatar/avatar-4.png" class="rounded-circle">
+                                        <img alt="image" src="assets/img/avatar/avatar-4.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Ardian Rahardiansyah</b>
@@ -169,7 +169,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" src="/assets/img/avatar/avatar-5.png" class="rounded-circle">
+                                        <img alt="image" src="assets/img/avatar/avatar-5.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Alfa Zulkarnain</b>
@@ -250,7 +250,7 @@
                     <!-- USER START -->
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, Amalia</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -277,7 +277,7 @@
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand row row-cols-1">
                         <div class="col">
-                            <img src="//assets/img/logo/logo.png" style="width: 40px; height: 40px;">
+                            <img src="/assets/img/logo/logo.png" style="width: 40px; height: 40px;">
                         </div>
                         <div class="col" style="line-height: 20px;">
                             <a href="<?= site_url() ?>" class="col" style="color: #ff3d87;">A M A L I A</a><br>
@@ -290,12 +290,12 @@
                     </div>
                     <!-- ?? -->
                     <ul class="sidebar-menu">
-                        <li><a class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>" href="<?= site_url() ?>"><i class="fas fa-fire"></i>
+                        <li class="<?= $menu == 'dashboard' ? 'active' : '' ?>"><a class="nav-link" href="<?= site_url() ?>"><i class="fas fa-fire"></i>
                                 <span>Dashboard</span></a></li>
                         <li class="dropdown <?= $menu == 'manage' ? 'active' : '' ?>">
                             <a href="" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa fa-clipboard-list"></i> <span>Manage</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link <?= $submenu == 'manageusers' ? 'active' : '' ?>" href="<?= site_url('manage_users') ?>">Manage Users</a></li>
+                                <li><a class=" nav-link<?= $submenu == 'manageusers' ? 'active' : '' ?>" href="<?= site_url('manage_users') ?>">Manage Users</a></li>
                                 <li><a class="nav-link <?= $submenu == 'manageevents' ? 'active' : '' ?>" href="<?= site_url('manage_events') ?>">Manage Events</a></li>
                                 <li><a class="nav-link <?= $submenu == 'managesantriwati' ? 'active' : '' ?>" href="<?= site_url('manage_santriwati') ?>">Manage Santriwati</a>
                                 </li>
@@ -345,24 +345,24 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="/assets/modules/jquery.min.js"></script>
-    <script src="/assets/modules/popper.js"></script>
-    <script src="/assets/modules/tooltip.js"></script>
-    <script src="/assets/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="/assets/modules/moment.min.js"></script>
-    <script src="/assets/js/stisla.js"></script>
+    <script src="assets/modules/jquery.min.js"></script>
+    <script src="assets/modules/popper.js"></script>
+    <script src="assets/modules/tooltip.js"></script>
+    <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="assets/modules/moment.min.js"></script>
+    <script src="assets/js/stisla.js"></script>
 
     <!-- JS Libraies -->
-    <script src="/assets/modules/summernote/summernote-bs4.js"></script>
-    <script src="/assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
-    <script src="/assets/modules/upload-preview//assets/js/jquery.uploadPreview.min.js"></script>
-    <script src="/assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="assets/modules/summernote/summernote-bs4.js"></script>
+    <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+    <script src="assets/modules/upload-preview/assets/js/jquery.uploadPreview.min.js"></script>
+    <script src="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
     <!-- Page Specific JS File -->
 
     <!-- Template JS File -->
-    <script src="/assets/js/scripts.js"></script>
-    <script src="/assets/js/custom.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/custom.js"></script>
 
     <div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 8px; z-index: 892; cursor: default; position: fixed; top: 0px; left: -8px; height: 1180px; display: block; opacity: 0;">
         <div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 6px; height: 314px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div>
