@@ -53,7 +53,7 @@
                                             <?= $validation->getError('banner_event'); ?>
                                         </div>
                                     </div>
-                                    <div class="card col-3 m-sm-1" style="width:fit-content;; outline: 1.5px solid #9a8c98;">
+                                    <div class="card col-3 m-sm-1" style="width:fit-content; outline: 1.5px solid #9a8c98;">
                                         <div class="card m-1" id="preview" name="preview" style="background-image:none;  background-size: cover; background-repeat: no-repeat; background-position: center center; height:230px;">
                                         </div>
                                     </div>
@@ -71,8 +71,8 @@
                                 </form>
                             </div>
                             <div class="form-group">
-                                <label>Lokasi</label>
-                                <textarea class="form-control <?= ($validation->hasError('lokasi_event')) ? 'is_invalid' : ''; ?>" name="lokasi_event" value="<?= old('lokasi_event'); ?>" required></textarea>
+                                <label>Lokasi Kegiatan</label>
+                                <input type="text" name="lokasi_event" class="form-control <?= ($validation->hasError('lokasi_event')) ? 'is_invalid' : ''; ?>" value="<?= old('lokasi_event'); ?>" required>
                                 <div class="invalid-feedback">
                                     <?= $validation->getError('lokasi_event'); ?>
                                 </div>

@@ -28,6 +28,7 @@ abstract class BaseController extends Controller
      */
     protected $request;
     protected $eventsModel;
+    protected $db;
 
     /**
      * An array of helpers to be loaded automatically upon
@@ -49,6 +50,8 @@ abstract class BaseController extends Controller
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
+        $this->helpers = array_merge($this->helpers, ['setting']);
+
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
@@ -56,5 +59,6 @@ abstract class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
         // $this->db      = \Config\Database::connect();
         $this->eventsModel = new \App\Models\EventsModel();
+        $this->db =  \Config\Database::connect();
     }
 }

@@ -7,6 +7,15 @@
 
 "use strict";
 
+// modal confirmation
+function submitDel(id) {
+    $('#del-'+id).submit()
+}
+
+function delAll(){
+    $('#delAll').submit()
+}
+
 // membuat dinamis clickable
 // var path = location.pathname.split('/')
 // var url = location.origin + '/' + path[1]

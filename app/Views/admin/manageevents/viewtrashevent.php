@@ -8,13 +8,14 @@
 <?= $this->section('content') ?>
 <section class="section">
     <div class="section-header">
-        <h1>Manage Events</h1>
-        <div class="section-header-button">
-            <a href="<?= site_url('manage_events/add_event') ?>" class="btn btn-primary">Add Event</a>
+        <div class="section-header-back">
+            <a href="<?= site_url('manage_events') ?>" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
         </div>
+        <h4>Recycle Bin Events</h4>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
             <div class="breadcrumb-item"><a href="#">Events</a></div>
+            <div class="breadcrumb-item">All Events</div>
         </div>
     </div>
 
@@ -35,36 +36,24 @@
     <?php endif; ?>
 
     <div class="section-body">
-        <h2 class="section-title">Manage Your Events</h2>
-        <p class="section-lead">
-            You can manage all events, such as editing, deleting and more.
-        </p>
-
         <div class="row mt-4">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header row">
-                        <div class="col-8">
-                            <h4>All Events</h4>
-                        </div>
+                        <h4 class="col-9">All Trash Events</h4>
                         <div class="col-3">
-                            <form>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
-                                    </div>
-                                </div>
+                            <a href="<?= site_url('manage_events/restore') ?>" class="btn btn-icon btn-primary mr-2">Restore All</a>
+                            <form action="/manage_events/delete2?>" method="post" class="d-inline" id="delAll">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <a class="btn btn-danger btn-sm text-white" data-confirm="Hapus Data?|Apakah anda yakin menghapus data secara permanen?" data-confirm-yes="delAll()">Delete All</a>
                             </form>
-                        </div>
-                        <div class="col-1">
-                            <a href="<?= site_url('manage_events/trash') ?>" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="clearfix mb-3"></div>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" style="background-color: #edede9;">
                                 <tbody>
                                     <tr>
                                         <th class="text-center pt-2">
@@ -79,7 +68,7 @@
                                         <th>Created At</th>
                                         <th>Event Date</th>
                                         <th>Lokasi</th>
-                                        <th>Status</th>
+                                        <th>Aksi</th>
                                     </tr>
                                     <?php foreach ($events as $event) : ?>
                                         <tr>
@@ -91,17 +80,6 @@
                                             </td>
                                             <td><?= $event['id_event']; ?></td>
                                             <td><?= $event['nama_event']; ?>
-                                                <div class="table-links">
-                                                    <a href="/manage_events/view/<?= $event['id_event']; ?>">View</a>
-                                                    <div class="bullet"></div>
-                                                    <a href="/manage_events/edit/<?= $event['id_event']; ?>">Edit</a>
-                                                    <form action="/manage_events/delete/<?= $event['id_event']; ?>" method="post" class="d-inline" id="del-<?= $event['id_event']; ?>">
-                                                        <?= csrf_field(); ?>
-                                                        <input type="hidden" name="_method" value="DELETE">
-                                                        <div class="bullet"></div>
-                                                        <a class="text-danger" data-confirm="Hapus Data?|Apakah anda yakin menghapus data?" data-confirm-yes="submitDel(<?= $event['id_event']; ?>)">Trash</a>
-                                                    </form>
-                                                </div>
                                             </td>
                                             <td>
                                                 <a href="#">
@@ -109,44 +87,21 @@
                                                     <div class="d-inline-block ml-1">Rizal Fakhri</div>
                                                 </a>
                                             </td>
-                                            <td><?= $event['created_at']; ?></td>
+                                            <td><?= $event['created_at'] ?></td>
                                             <td><?= $event['tanggal_event']; ?></td>
                                             <td><?= $event['lokasi_event']; ?></td>
-                                            <td>
-                                                <div class="badge badge-primary">Done</div>
+                                            <td class="text-center mt-4" style="display: flex;">
+                                                <div>
+                                                    <a href="/manage_events/restore/<?= $event['id_event']; ?>" class="btn btn-info btn-sm mr-3" style="width: fit-content;">Restore</a>
+                                                </div>
+                                                <form action="/manage_events/delete2/<?= $event['id_event']; ?>" method="post" class="d-inline" id="del-<?= $event['id_event']; ?>">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <a class="btn btn-danger btn-sm text-white" data-confirm="Hapus Data?|Apakah anda yakin menghapus data secara permanen?" data-confirm-yes="submitDel(<?= $event['id_event']; ?>)">Delete Permanently</a>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
-                                    <tr>
-                                        <td>
-                                            <div class="custom-checkbox custom-control">
-                                                <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-                                                <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                                            </div>
-                                        </td>
-                                        <td>0001</td>
-                                        <td>Amalia Berbagi
-                                            <div class="table-links">
-                                                <a href="#">View</a>
-                                                <div class="bullet"></div>
-                                                <a href="#">Edit</a>
-                                                <div class="bullet"></div>
-                                                <a href="#" class="text-danger">Trash</a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <a href="#">
-                                                <img alt="image" src="/assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="title" title="">
-                                                <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                            </a>
-                                        </td>
-                                        <td>20-09-2023</td>
-                                        <td>28-09-2023</td>
-                                        <td>Asrama</td>
-                                        <td>
-                                            <div class="badge badge-warning">Upcoming</div>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -182,7 +137,6 @@
             </div>
         </div>
     </div>
-
 
 </section>
 <?= $this->endSection() ?>

@@ -11,25 +11,34 @@ class EventsModel extends Model
     protected $primaryKey       = 'id_event';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $allowedFields    = ['nama_event', 'tanggal_event', 'lokasi_event', 'banner_event', 'deskripsi_event', 'status_event'];
+
+    protected $useSoftDeletes = true;
+    protected $allowedFields    = ['nama_event', 'slug', 'tanggal_event', 'lokasi_event', 'banner_event', 'deskripsi_event', 'status_event'];
 
     // Dates
-    protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
+    protected $useTimestamps = ['tanggal_event', 'created_at', 'updated_at', 'deleted_at'];
+    protected $dateFormat    = 'date';
     protected $createdField  = 'created_at';
-    // protected $updatedField  = 'updated_at';
-    // protected $deletedField  = 'deleted_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
 
     /**
      * Summary of getEvent
      * @param mixed $slug
      * @return array|object|null
      */
-    public function getEvent($slug = false)
+    public function getEvent($id = false)
     {
-        if ($slug == false) {
+        if ($id == false) {
             return $this->findAll();
         }
-        return $this->where(['slug' => $slug])->first();
+        return $this->where(['id_event' => $id])->first();
+    }
+    public function getTrashEvent($id = false)
+    {
+        if ($id == false) {
+            return $this->onlyDeleted()->findAll();
+        }
+        return $this->where(['id_event' => $id])->first();
     }
 }

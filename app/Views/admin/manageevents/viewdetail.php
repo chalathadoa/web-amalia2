@@ -18,24 +18,28 @@
             <div class="breadcrumb-item">All Events</div>
         </div>
     </div>
-
     <div class="section-body">
-        <h2 class="section-title">Amalia Berbagi</h2>
+        <h2 class="section-title"><?= $event['nama_event'] ?></h2>
     </div>
-    <div lass="mt-3">
-        <img src="/assets/img/try/ungu.jpg" class="img-fluid" alt="Responsive image">
+    <div class="card mt-3" style="width:100%;">
+        <img src="/assets/img/uploaded/<?= $event['banner_event']; ?>" style="width: fit-content; display: block;" class="img-fluid m-auto p-2" alt="Responsive image">
     </div>
-    <div class="row mt-3">
-        <img class="col-2 rounded-circle mr-1" src="/assets/img/logo/logo.png" style="height: auto;" alt="">
-        <div class="col">
-            <p class="d-sm-none d-lg-inline-block">Amalia Khairun Nisa'</p>
-            <p>Kamis, 21 September 2023</p>
+    <div class="card">
+        <div class="card-header">
+            <div class="media mt-2">
+                <img src="/assets/img/logo/logo.png" width="40" style="display: block;" class="mr-3 rounded-circle" alt="">
+                <div class="media-body text-left">
+                    <b class="d-sm-none d-lg-inline-block" style="display: block; margin:auto; font-size:14px;">Amalia Khairun Nisa'</b>
+                    <p style="font-size:14px; line-height:80%;"><?= $tanggal; ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body" style="text-align:justify;">
+            <p>
+                <?= $event['deskripsi_event'] ?>
+            </p>
         </div>
     </div>
-    <div class="mt-3 mb-3" style="text-align:justify; font-size:18px;">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat vel sodales consequat. Nam hendrerit risus nec metus pretium facilisis. Quisque eu posuere libero, et pharetra erat. Ut luctus tortor at eleifend dictum. Mauris sapien mauris, accumsan eu lacus sit amet, lobortis dignissim dui. Cras tempor tortor sed urna volutpat, non bibendum massa efficitur. Nulla facilisi. Fusce ac augue ante. Morbi vitae molestie ex, non facilisis felis. Aliquam iaculis interdum nisi a semper. Sed laoreet, tortor ut cursus ultricies, ipsum turpis pulvinar ligula, ut ultricies neque orci id enim. In volutpat tempor vulputate. Nulla laoreet nulla et consectetur ullamcorper. Morbi gravida molestie lacus a porttitor. Mauris a maximus elit, in volutpat metus. Suspendisse potenti.
-        </p>
-    </div>
+
 </section>
 <?= $this->endSection() ?>
